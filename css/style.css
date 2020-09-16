@@ -13,22 +13,29 @@ body {
 #grid {
   display: grid;
   margin: auto;
-  border: 3px solid #9f9f9f;
-  background-color: #9f9f9f;
+  border: 3px solid #d5d5d5;
+  background-color: #d5d5d5;
   grid-template-columns: repeat(6, 80px);
   grid-template-rows: repeat(6, 80px);
   grid-gap: 3px;
 }
 
-#grid > .square {
+#grid .square {
   background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#grid > .square-green {
+#grid .square__number {
+  font-size: 30px;
+}
+
+#grid .square-green {
   background-color: #20f656;
 }
 
-#grid > .square-yellow {
+#grid .square-yellow {
   background-color: #ffe921;
 }
 

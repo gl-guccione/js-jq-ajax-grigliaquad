@@ -24,14 +24,21 @@ body {
 
   margin: auto;
 
-  border: 3px solid #9f9f9f;
-  background-color: #9f9f9f;
+  border: 3px solid #d5d5d5;
+  background-color: #d5d5d5;
 
   grid-template-columns: repeat(6, 80px);
   grid-template-rows: repeat(6, 80px);
   grid-gap: 3px;
-  > .square {
+   .square {
     background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__number {
+      font-size: 30px;
+
+    }
     &-green {
       background-color: #20f656;
     }

@@ -23,25 +23,26 @@ for (var i = 0; i < numOfSquare; i++) {
 $(".square").click(function() {
 
   var thisSquare = $(this);
+  if (!(thisSquare.hasClass("square-yellow")) && !(thisSquare.hasClass("square-green"))) {
+    $.ajax(
+      {
+        "url": "https://flynn.boolean.careers/exercises/api/random/int",
+        "method": "GET",
+        "success": function (data, stato) {
 
-  $.ajax(
-    {
-      "url": "https://flynn.boolean.careers/exercises/api/random/int",
-      "method": "GET",
-      "success": function (data, stato) {
+          if (data.response <= 5) {
+            thisSquare.addClass("square-yellow");
+          } else if (data.response > 5) {
+            thisSquare.addClass("square-green");
+          }
 
-        if (data.response <= 5) {
-          thisSquare.addClass("square-yellow");
-        } else if (data.response > 5) {
-          thisSquare.addClass("square-green");
+          thisSquare.children("span").text(data.response);
+
+        },
+        "error": function (richiesta, stato, errori) {
+          alert("error");
         }
-
-        thisSquare.text(data.response);
-
-      },
-      "error": function (richiesta, stato, errori) {
-        alert("error");
       }
-    }
-  );
+    );
+  }
 });
