@@ -31,6 +31,7 @@ body {
   grid-template-rows: repeat(6, 80px);
   grid-gap: 3px;
    .square {
+    cursor: pointer;
     background-color: #fff;
     display: flex;
     justify-content: center;
@@ -41,9 +42,11 @@ body {
     }
     &-green {
       background-color: #20f656;
+      cursor: auto;
     }
     &-yellow {
       background-color: #ffe921;
+      cursor: auto;
     }
   }
 }

@@ -21,6 +21,7 @@ body {
 }
 
 #grid .square {
+  cursor: pointer;
   background-color: #fff;
   display: flex;
   justify-content: center;
@@ -33,10 +34,12 @@ body {
 
 #grid .square-green {
   background-color: #20f656;
+  cursor: auto;
 }
 
 #grid .square-yellow {
   background-color: #ffe921;
+  cursor: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
