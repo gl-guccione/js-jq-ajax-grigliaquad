@@ -2,9 +2,14 @@
 // Se è <= 5 il quadrato diventa giallo, se è > di 5 il quadrato diventa verde.
 // Il numero ottenuto appare al centro del quadrato.
 
+var columns = parseInt(prompt("Inserisci il numero di colonne da generare"));
+var rows = parseInt(prompt("Inserisci il numero di righe da generare"));
+
+$("#grid").css("grid-template-columns", "repeat(" + columns + ", 80px)");
+$("#grid").css("grid-template-rows", "repeat(" + rows + ", 80px)");
 
 // generating the 6x6 square
-var numOfSquare = 6 * 6;
+var numOfSquare = columns * rows;
 
 var source = $("#square-template").html();
 var template = Handlebars.compile(source);

@@ -31,22 +31,26 @@ body {
   grid-template-rows: repeat(6, 80px);
   grid-gap: 3px;
    .square {
-    cursor: pointer;
-    background-color: #fff;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    background-color: #fff;
     &__number {
       font-size: 30px;
 
     }
     &-green {
-      background-color: #20f656;
       cursor: auto;
+
+      background-color: #20f656;
     }
     &-yellow {
-      background-color: #ffe921;
       cursor: auto;
+
+      background-color: #ffe921;
     }
   }
 }

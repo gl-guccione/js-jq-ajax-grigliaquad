@@ -21,11 +21,11 @@ body {
 }
 
 #grid .square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #grid .square__number {
@@ -33,13 +33,13 @@ body {
 }
 
 #grid .square-green {
-  background-color: #20f656;
   cursor: auto;
+  background-color: #20f656;
 }
 
 #grid .square-yellow {
-  background-color: #ffe921;
   cursor: auto;
+  background-color: #ffe921;
 }
 
 /*# sourceMappingURL=style.css.map */
